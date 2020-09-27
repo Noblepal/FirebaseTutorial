@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="5dip"
+    tools:context=".MainActivity">
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dip"
+        android:layout_marginStart="15dip"
+        android:hint="@string/email"
+        app:endIconMode="clear_text"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        app:errorEnabled="true"
+        android:id="@+id/edt_email_layout"
+        android:layout_marginBottom="5dip">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_email"
+            android:inputType="textEmailAddress">
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dip"
+        android:layout_marginStart="15dip"
+        android:hint="@string/password"
+        app:endIconMode="password_toggle"
+        app:passwordToggleEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        app:errorEnabled="true"
+        android:id="@+id/edt_pass_layout"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="5dip">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_password"
+            android:inputType="textPassword">
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dip"
+        android:layout_marginEnd="15dip"
+        android:orientation="horizontal"
+        android:weightSum="4.25"
+        android:layout_marginTop="5dip">
+
+        <Button
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/register"
+            android:id="@+id/btn_register"
+            app:icon="@drawable/ic_add_user"
+            style="@style/Widget.MaterialComponents.Button.Icon"/>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:id="@+id/separator"
+            android:orientation="horizontal" />
+
+        <Button
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/login"
+            android:id="@+id/btn_login"
+            app:icon="@drawable/ic_login_user"
+            style="@style/Widget.MaterialComponents.Button.Icon"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:id="@+id/progress_authentication"
+        android:visibility="gone"/>
+
+</LinearLayout>
